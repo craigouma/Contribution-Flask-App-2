@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record Contribution</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: 20px auto;
+            padding: 45px;
+            background-color: #ffffff;
+            box-shadow: 0 0 5px rgb(64, 64, 64);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button[type="submit"] {
+            background-color: #23cb62;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        /* Add any additional CSS styles here */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Record Contribution</h1>
+    </header>
+
+    <div class="container">
+        <form action="/record_contribution" method="post">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="group_id">Group ID:</label>
+                <input type="text" id="group_id" name="group_id" required>
+            </div>
+            <button type="submit">Record Contribution</button>
+        </form>
+    </div>
+</body>
+</html>
